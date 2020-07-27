@@ -2,3 +2,4 @@ wwwroot/lib/
 obj
 bin/Debug/netcoreapp3.1
 .vscode
+bin\Release\netcoreapp3.1
