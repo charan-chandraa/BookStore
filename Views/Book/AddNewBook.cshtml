@@ -1,0 +1,27 @@
+@model BookModel
+@{
+    ViewData["Title"] = "Add New Book";
+}
+
+<div class="container">
+    <h1 class="display-4">Add New Book</h1>
+    <form method="POST" class="my-3" asp-action="AddNewBook" asp-controller="Book">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control">
+            </div>
+            <div class="form-group col-md-6">
+            <label asp-for="Author"></label>
+            <input asp-for="Author" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add Book" class="btn btn-dark">
+        </div>
+    </form>
+</div>

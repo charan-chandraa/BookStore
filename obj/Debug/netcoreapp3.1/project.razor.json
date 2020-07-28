@@ -20536,8 +20536,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\AspDotNetCore\\BookStore\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\AspDotNetCore\\BookStore\\Views\\Book\\GetBook.cshtml",
+      "TargetPath": "Views\\Book\\GetBook.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\AspDotNetCore\\BookStore\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\AspDotNetCore\\BookStore\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\AspDotNetCore\\BookStore\\Views\\Book\\GetAllBooks.cshtml",
+      "TargetPath": "Views\\Book\\GetAllBooks.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\AspDotNetCore\\BookStore\\Views\\Book\\AddNewBook.cshtml",
+      "TargetPath": "Views\\Book\\AddNewBook.cshtml",
       "FileKind": "mvc"
     }
   ],
