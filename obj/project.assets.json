@@ -197,6 +197,15 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "MySqlConnector/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/MySqlConnector.dll": {}
+        }
+      },
       "System.Collections.Immutable/1.5.0": {
         "type": "package",
         "compile": {
@@ -467,6 +476,36 @@
         "version.txt"
       ]
     },
+    "MySqlConnector/1.0.0": {
+      "sha512": "7meR9elqyw/cF67N19MCKYzZjtyMJBlaCvjOC53XbrRQcvzER1sICpzcHwpsZF7sTxhHDZk6b3J25IOvSJaj6A==",
+      "type": "package",
+      "path": "mysqlconnector/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/MySqlConnector.dll",
+        "lib/net45/MySqlConnector.xml",
+        "lib/net461/MySqlConnector.dll",
+        "lib/net461/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/net5.0/MySqlConnector.dll",
+        "lib/net5.0/MySqlConnector.xml",
+        "lib/netcoreapp2.1/MySqlConnector.dll",
+        "lib/netcoreapp2.1/MySqlConnector.xml",
+        "lib/netcoreapp3.0/MySqlConnector.dll",
+        "lib/netcoreapp3.0/MySqlConnector.xml",
+        "lib/netstandard1.3/MySqlConnector.dll",
+        "lib/netstandard1.3/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.1.0.0.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    },
     "System.Collections.Immutable/1.5.0": {
       "sha512": "EXKiDFsChZW0RjrZ4FYHu9aW6+P4MCgEDCklsVseRfhoO0F+dXeMSsMRAlVXIo06kGJ/zv+2w1a2uc2+kxxSaQ==",
       "type": "package",
@@ -652,7 +691,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 3.1.6"
+      "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 3.1.6",
+      "MySqlConnector >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -661,11 +701,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "e:\\AspDotNetCore\\BookStore\\BookStore.csproj",
+      "projectUniqueName": "E:\\AspDotNetCore\\BookStore\\BookStore.csproj",
       "projectName": "BookStore",
-      "projectPath": "e:\\AspDotNetCore\\BookStore\\BookStore.csproj",
+      "projectPath": "E:\\AspDotNetCore\\BookStore\\BookStore.csproj",
       "packagesPath": "C:\\Users\\chara\\.nuget\\packages\\",
-      "outputPath": "e:\\AspDotNetCore\\BookStore\\obj\\",
+      "outputPath": "E:\\AspDotNetCore\\BookStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\chara\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -695,6 +735,10 @@
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
             "target": "Package",
             "version": "[3.1.6, )"
+          },
+          "MySqlConnector": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [

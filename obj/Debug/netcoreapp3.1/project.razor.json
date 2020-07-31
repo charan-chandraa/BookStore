@@ -20546,6 +20546,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\AspDotNetCore\\BookStore\\Views\\Book\\SearchBook.cshtml",
+      "TargetPath": "Views\\Book\\SearchBook.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\AspDotNetCore\\BookStore\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

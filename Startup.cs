@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using BookStore.Models;
+using BookStore.Repository;
+using MySqlConnector;
+using System.Configuration;
 
 namespace BookStore
 {
@@ -21,6 +25,10 @@ namespace BookStore
 #if DEBUG            
             services.AddRazorPages().AddRazorRuntimeCompilation();
 #endif
+
+            //MySql
+            //services.AddTransient<MySqlDatabase>(_ => new MySqlDatabase("server=localhost; database=bookstore; uid=root; pwd=rootPass@9699;"));
+                    
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

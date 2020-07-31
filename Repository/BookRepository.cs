@@ -1,33 +1,106 @@
 using System.Collections.Generic;
 using BookStore.Models;
 using System.Linq;
+using MySqlConnector;
+using System;
 
 namespace BookStore.Repository
 {
     public class BookRepository
     {
-        private List<BookModel> DataSource()
-        {
-            return new List<BookModel>()
-            {
-                new BookModel(){Id=1, Title="The Alchemist", Author="Paulo Coelho", Description="This is the description for The Alchemist book."},
-                new BookModel(){Id=2, Title="The legend of suheldev", Author="Amish Tripati", Description="This is the description for The legend of suheldev book."},
-                new BookModel(){Id=3, Title="Shiva Trilogy", Author="Amish Tripati", Description="This is the description for Shiva Triology book."},
-                new BookModel(){Id=4, Title="The lost Symbol", Author="Dan Brown", Description="This is the description for The lost symbol book."},
-                new BookModel(){Id=5, Title="Stranger Trilogy", Author="Navoneel Chakrabothy", Description="This is the description for Stranger Trilogy book."}
-            };
-        }
+        private string connectionString = "Server=localhost;User ID=root;Password=rootPass@9699;Database=bookstore";
         public List<BookModel> GetAllBooks()
         {
-            return DataSource();
+            List<BookModel> list = new List<BookModel>();
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (var command = new MySqlCommand("SELECT * FROM books;", connection))
+                using (var reader = command.ExecuteReader())
+                {
+                    while(reader.Read())
+                    {
+                        list.Add(new BookModel()
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Title = reader["Title"].ToString(),
+                            Author = reader["Author"].ToString(),
+                            Description = reader["Description"].ToString()
+                        });
+                    }
+                }
+            }
+            return list;
         }
+
         public BookModel GetBookById(int id)
         {
-            return DataSource().Where(x => x.Id ==id).FirstOrDefault();
+            BookModel book = new BookModel();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (var command = new MySqlCommand("SELECT * FROM books WHERE Id = " + id + ";", connection))
+                using (var reader = command.ExecuteReader())
+                {
+                    while(reader.Read())
+                    {
+                        book.Id = Convert.ToInt32(reader["Id"]);
+                        book.Title = reader["Title"].ToString();
+                        book.Author = reader["Author"].ToString();
+                        book.Description = reader["Description"].ToString();
+                    }
+                }
+            }
+
+            return book;
         }
-        public List<BookModel> SearchBook(string title, string author)
+
+        public List<BookModel> SearchBook(string searchVal)
         {
-            return DataSource().Where(x => x.Title.Contains(title) || x.Author.Contains(author)).ToList();
+            List<BookModel> list = new List<BookModel>();
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (var command = new MySqlCommand("SELECT * FROM books WHERE Title LIKE '%" + searchVal + "%' || Author LIKE '%" + searchVal + "%';", connection))
+                using (var reader = command.ExecuteReader())
+                {
+                    while(reader.Read())
+                    {
+                        list.Add(new BookModel()
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Title = reader["Title"].ToString(),
+                            Author = reader["Author"].ToString(),
+                            Description = reader["Description"].ToString()
+                        });
+                    }
+                }
+            }
+            return list;
+        }
+
+        public int AddNewBook(BookModel book)
+        {
+            int bookId=0;
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (var command = new MySqlCommand("INSERT INTO books (Title, Author, Description) VALUES('" + book.Title + "','" + book.Author + "','" + book.Description + "');SELECT LAST_INSERT_ID()", connection))
+                using (var reader = command.ExecuteReader())
+                {
+                    while(reader.Read())
+                    {
+                        bookId = Convert.ToInt32(reader["LAST_INSERT_ID()"]);
+                    }
+                }
+            }
+            return bookId;
         }
     }
 }

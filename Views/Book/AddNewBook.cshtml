@@ -5,15 +5,28 @@
 
 <div class="container">
     <h1 class="display-4">Add New Book</h1>
+    @if (ViewBag.IsSuccess == true)
+    {
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Book added successfully!</strong> 
+        <p>Click <a asp-route="bookDetailsRoute" asp-route-id="@ViewBag.BookId">here</a> to go to details.</p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    }
+    
     <form method="POST" class="my-3" asp-action="AddNewBook" asp-controller="Book">
         <div class="form-row">
             <div class="form-group col-md-6">
-            <label asp-for="Title"></label>
-            <input asp-for="Title" class="form-control">
+                <label asp-for="Title"></label>
+                <input asp-for="Title" class="form-control">
+                <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group col-md-6">
-            <label asp-for="Author"></label>
-            <input asp-for="Author" class="form-control">
+                <label asp-for="Author"></label>
+                <input asp-for="Author" class="form-control">
+                <span asp-validation-for="Author" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">

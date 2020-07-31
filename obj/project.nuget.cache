@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eLPvZAume3hN0n1Y4p2rdyRp174h6N2rrRSvYpHx2j+vXGySsXOjbQyEqHfR8YfnpD2pMfa2LzMbfeyFi8e57A==",
+  "dgSpecHash": "/IqZuFLC1FFwag3R7X6keUMB3Ler5tXkvWIZyFeZpjxO9MKZoYbB7fNLrC0zpEiAxcKL/VSTlBfRjhldHPalgA==",
   "success": true,
   "projectFilePath": "E:\\AspDotNetCore\\BookStore\\BookStore.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\chara\\.nuget\\packages\\microsoft.codeanalysis.razor\\3.1.6\\microsoft.codeanalysis.razor.3.1.6.nupkg.sha512",
     "C:\\Users\\chara\\.nuget\\packages\\microsoft.extensions.dependencymodel\\3.1.6\\microsoft.extensions.dependencymodel.3.1.6.nupkg.sha512",
     "C:\\Users\\chara\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\chara\\.nuget\\packages\\mysqlconnector\\1.0.0\\mysqlconnector.1.0.0.nupkg.sha512",
     "C:\\Users\\chara\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
     "C:\\Users\\chara\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\chara\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
