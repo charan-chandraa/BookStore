@@ -28,15 +28,7 @@
         @foreach (var book in Model)
         {
           <div class="col-md-6 col-lg-4">
-              <div class="card shadow my-3">
-                  <img src="~/images/book2.jpg" asp-append-version="true" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <h5 class="card-title">@book.Title</h5>
-                      <p class="card-text">@book.Description</p>
-                      <p class="card-text text-muted">@book.Author</p>
-                      <a asp-route="bookDetailsRoute" asp-route-id="@book.Id" class="btn btn-sm btn-secondary">View Details</a>
-                  </div>
-              </div>
+              <partial name="_BookThumbnail" model="@book" />
           </div>
         }
       </div>
@@ -53,33 +45,9 @@ else
   <div class="container">
     <h3 class="display-4">Top Books</h3>
     <div class="card-deck">
-      <div class="card shadow">
-        <img src="~/images/book2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text text-muted">Author name</p>
-          <a href="#" class="btn btn-sm btn-secondary">View Details</a>
-        </div>
-      </div>
-      <div class="card shadow">
-        <img src="~/images/book2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          <p class="card-text text-muted">Author name</p>
-          <a href="#" class="btn btn-sm btn-secondary">View Details</a>
-        </div>
-      </div>
-      <div class="card shadow">
-        <img src="~/images/book2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          <p class="card-text text-muted">Author name</p>
-          <a href="#" class="btn btn-sm btn-secondary">View Details</a>
-        </div>
-      </div>
+      <partial name="_BookThumbnail" model="new BookModel()" />
+      <partial name="_BookThumbnail" model="new BookModel()" />
+      <partial name="_BookThumbnail" model="new BookModel()" />
     </div>
   </div>
 }

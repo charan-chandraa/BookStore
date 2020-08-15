@@ -1,0 +1,11 @@
+@model BookModel
+
+<div class="card shadow my-3">
+    <img src="~/images/book2.jpg" asp-append-version="true" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">@(string.IsNullOrEmpty(Model.Title) ? "Book Title Unavailable" : Model.Title)</h5>
+        <p class="card-text">@(string.IsNullOrEmpty(Model.Description) ? "Book Description is not available" : Model.Description)</p>
+        <p class="card-text text-muted">@(string.IsNullOrEmpty(Model.Author) ? "NA" : Model.Author)</p>
+        <a asp-route="bookDetailsRoute" asp-route-id="@Model.Id" class="btn btn-sm btn-secondary">View Details</a>
+    </div>
+</div>

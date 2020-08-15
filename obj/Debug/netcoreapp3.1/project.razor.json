@@ -20536,6 +20536,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\AspDotNetCore\\BookStore\\Views\\Shared\\_BookThumbnail.cshtml",
+      "TargetPath": "Views\\Shared\\_BookThumbnail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\AspDotNetCore\\BookStore\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"

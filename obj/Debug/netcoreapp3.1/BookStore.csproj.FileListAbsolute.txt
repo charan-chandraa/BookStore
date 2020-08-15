@@ -356,3 +356,4 @@ E:\AspDotNetCore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.csht
 E:\AspDotNetCore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Book\AddNewBook.cshtml.g.cs
 E:\AspDotNetCore\BookStore\bin\Debug\netcoreapp3.1\MySqlConnector.dll
 E:\AspDotNetCore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Book\SearchBook.cshtml.g.cs
+E:\AspDotNetCore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_BookThumbnail.cshtml.g.cs
